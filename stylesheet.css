@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.battle-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Closer together */
+    margin-top: 20px;
+}
+
+.pokemon {
+    width: 120px; /* Slightly smaller cards */
+    text-align: center;
+}
+
+.pokemon img {
+    width: 90px; /* Slightly bigger images */
+    height: auto;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffcc00;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #ff9900;
+}
+
+#battle-log {
+    font-size: 16px;
+    margin-top: 15px;
+}
