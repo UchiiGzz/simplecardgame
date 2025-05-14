@@ -1,0 +1,526 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    background-color: #2c2f3a;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    width: 340px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+}
+
+/* Form inputs */
+.form input[type="text"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #3a3f51;
+    color: #f1f1f1;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form input[type="text"]::placeholder,
+.form input[type="password"]::placeholder {
+    color: #bbb;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus {
+    outline: none;
+    border-color: #5dade2;
+    background-color: #444a63;
+}
+
+/* Buttons */
+.form button {
+    width: 48%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin: 0.5rem 1%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    color: white;
+}
+
+.form button:first-of-type {
+    background-color: #34495e;
+}
+
+.form button:first-of-type:hover {
+    background-color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.form button:last-of-type {
+    background-color: #5dade2;
+}
+
+.form button:last-of-type:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Game container */
+.game-container {
+    background-color: #2c2f3a;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.card-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.card {
+    background-color: #3a3f51;
+    border: 1px solid #5dade2;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 80px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Button row */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.button-row button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #5dade2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.button-row button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.button-row button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(93, 172, 226, 0.7);
+}
+
+/* Result container */
+.result-container {
+    background-color: #2c2f3a;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.result-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result-container p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.result-container a {
+    display: inline-block;
+    background-color: #5dade2;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.result-container a:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Card designs */
+.card {
+    position: relative;
+    width: 100px;
+    height: 140px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: transform 0.3s ease;
+    cursor: default;
+    font-family: 'Arial', sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.card-value.top {
+    top: 5px;
+    left: 5px;
+}
+
+.card-value.bottom {
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(180deg);
+}
+
+/* Suit styles */
+.card-suit {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Color for hearts and diamonds */
+.card.hearts .card-value,
+.card.diamonds .card-value,
+.card.hearts .card-suit,
+.card.diamonds .card-suit {
+    color: #e44145;
+}
+
+/* Color for clubs and spades */
+.card.clubs .card-value,
+.card.spades .card-value,
+.card.clubs .card-suit,
+.card.spades .card-suit {
+    color: #252525;
+}
+
+/* Suit symbols */
+.card.hearts .card-suit::after {
+    content: '♥';
+}
+
+.card.diamonds .card-suit::after {
+    content: '♦';
+}
+
+.card.clubs .card-suit::after {
+    content: '♣';
+}
+
+.card.spades .card-suit::after {
+    content: '♠';
+}
+
+/* Card back design */
+.card.back {
+    background: linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+                linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+                linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: #2c3e50;
+    border: 2px solid #fff;
+}
+
+/* Card container styles */
+.card-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+/* Card animations */
+@keyframes dealCard {
+    from {
+        transform: translateY(-100vh) rotate(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+.card.dealt {
+    animation: dealCard 0.5s ease-out forwards;
+}
+
+/* Face card designs */
+.card.face {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.card.face::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Card corner decorations */
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.card::before {
+    top: 5px;
+    right: 5px;
+}
+
+.card::after {
+    bottom: 5px;
+    left: 5px;
+}
+
+/* Add these new styles to your existing stylesheet.css */
+
+/* Dealer card reveal animation */
+@keyframes revealCard {
+    from {
+        transform: rotateY(90deg);
+        background: #2c3e50; /* Same as card back */
+    }
+    to {
+        transform: rotateY(0);
+        background: white;
+    }
+}
+
+/* Applied when game is over to reveal dealer cards */
+.card.dealer-reveal {
+    animation: revealCard 0.8s ease-out forwards;
+    transform-style: preserve-3d;
+}
+
+/* Delay the reveal of each subsequent dealer card */
+.card.dealer-reveal:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.card.dealer-reveal:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.card.dealer-reveal:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.card.dealer-reveal:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+/* Ensure cards stay face-up after reveal */
+.card.revealed {
+    background: white;
+    transform: rotateY(0);
+}
+
+/* Special styling for dealer's section during reveal */
+.dealer-section.revealing .card.back {
+    transform: rotateY(90deg);
+}
+
+/* Game over state styling */
+.game-over .dealer-section .card {
+    background: white;
+}
+
+.game-over .dealer-section .card.back {
+    display: none; /* Hide any remaining back cards */
+}
+
+/* Add this to your existing card styles */
+.card {
+    backface-visibility: hidden;
+    transform-origin: center;
+}
+
+
+/* Dealer card reveal styles */
+.dealer-section.game-over .card.back {
+    display: none; /* Hide all face-down cards when game is over */
+}
+
+/* Make sure face-up cards are properly styled */
+.card {
+    position: relative;
+    width: 80px;
+    height: 120px;
+    background: white;
+    border-radius: 8px;
+    margin: 5px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card-value {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-value.top {
+    top: 5px;
+    left: 5px;
+}
+
+.card-value.bottom {
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(180deg);
+}
+
+.card-suit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+/* Card back styling */
+.card.back {
+    background: #1a3e72;
+    background-image: radial-gradient(circle at center, #2a5ba5 20%, #1a3e72 80%);
+}
+
+/* Card suit colors */
+.card.hearts, .card.diamonds {
+    color: red;
+}
+
+.card.clubs, .card.spades {
+    color: black;
+}
+
+/* Basis kaart stijl */
+.card {
+    width: 80px;
+    height: 120px;
+    background: white;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Zorg dat kaart symbolen zichtbaar zijn */
+.card-suit {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Kleuren voor de symbolen */
+.hearts .card-suit, .diamonds .card-suit {
+    color: red;
+}
+.clubs .card-suit, .spades .card-suit {
+    color: black;
+}
+
+/* Kaart achterkant */
+.card.back {
+    background: #1a3e72;
+    background-image: radial-gradient(circle at center, #2a5ba5 20%, #1a3e72 80%);
+}
+
+/* Verberg de waarden bij de achterkant */
+.card.back .card-value, 
+.card.back .card-suit {
+    display: none;
+}
+
+/* Game over state */
+.dealer-section.game-over .card {
+    background: white !important;
+}
+.dealer-section.game-over .card.back {
+    display: none;
+}
